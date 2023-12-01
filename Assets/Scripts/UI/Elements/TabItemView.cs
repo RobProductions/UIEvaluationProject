@@ -8,6 +8,7 @@ namespace UIDemo.UI
 	{
 		public TabItemModel model;
 		public TintOnSelected[] affectTints;
+		public Animator[] affectAnims;
 
 		private void OnEnable()
 		{
@@ -30,6 +31,10 @@ namespace UIDemo.UI
 			foreach(TintOnSelected tint in affectTints)
 			{
 				tint.SetSelected(model.IsSelected);
+			}
+			foreach(Animator anim in affectAnims)
+			{
+				anim.SetInteger("state", (model.IsSelected) ? 1 : 0);
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ namespace UIDemo.UI
 	public class TintOnSelected : MonoBehaviour
 	{
 		public Image targetImage;
+		public TextMeshProUGUI targetText;
 		public Color tintColor = Color.white;
 		public bool defaultIsTransparent = false;
 		public float tintSpeed = 5f;
@@ -50,6 +52,10 @@ namespace UIDemo.UI
 			{
 				targetImage.color = color;
 			}
+			if(targetText != null)
+			{
+				targetText.color = color;
+			}
 		}
 
 		Color GetImageColor()
@@ -57,6 +63,10 @@ namespace UIDemo.UI
 			if(targetImage != null)
 			{
 				return targetImage.color;
+			}
+			if(targetText != null)
+			{
+				return targetText.color;
 			}
 			return Color.black;
 		}

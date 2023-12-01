@@ -244,7 +244,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 2660587448766885241}
-  affectTints: []
+  affectTints:
+  - {fileID: 1020963842091087445}
+  affectAnims:
+  - {fileID: 2660587448766885236}
 --- !u!1 &2660587449801532587
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +259,7 @@ GameObject:
   - component: {fileID: 2660587449801532584}
   - component: {fileID: 2660587449801532590}
   - component: {fileID: 2660587449801532585}
+  - component: {fileID: 1020963842091087445}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -319,8 +323,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 2164260863
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -379,3 +383,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1020963842091087445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2660587449801532587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569bd8e0667405e4a86d74573b3ff52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImage: {fileID: 0}
+  targetText: {fileID: 2660587449801532585}
+  tintColor: {r: 1, g: 1, b: 1, a: 0.8}
+  defaultIsTransparent: 0
+  tintSpeed: 4
